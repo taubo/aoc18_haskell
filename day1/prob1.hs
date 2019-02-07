@@ -1,4 +1,5 @@
 import System.IO
+import Result
 
 rmPlus str
   | head str == '+' = tail str
@@ -13,5 +14,6 @@ main = do
     let lin = lines content
         nums = toInt lin
         sums = sum nums
-    putStr . show $ sums
+    putStrLn (resultString 1 1 547)
+    putStrLn . show $ sums
     hClose inputFile
